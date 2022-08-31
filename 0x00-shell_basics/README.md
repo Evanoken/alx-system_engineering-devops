@@ -1,1 +1,1 @@
-where am i
+in the correct directory

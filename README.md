@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-SE
+Currently at bash commands
