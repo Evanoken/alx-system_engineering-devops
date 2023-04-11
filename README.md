@@ -1,1 +1,1 @@
-Currently at bash commands
+This is an SSH authentication
