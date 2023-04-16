@@ -1,0 +1,21 @@
+ACTIVITIES THAT TAKE PLACE WHEN YOU TYPE A URL IN A BROWSER
+
+When you type https://www.google.com into your browser and press enter, several things happen behind the scenes that allow you to connect to the website. In this blog post, we will go through the process step-by-step and explore each component in detail.
+
+Firstly, your computer needs to find out the IP address of the server hosting the website. To do this, it sends a DNS (Domain Name System) request to a DNS server. The DNS server returns the IP address of the server that hosts the website. This is similar to looking up a phone number in a directory.
+
+Next, the browser establishes a TCP/IP (Transmission Control Protocol/Internet Protocol) connection with the server. This involves a three-way handshake process where the browser sends a SYN (synchronize) packet to the server, the server responds with a SYN-ACK (synchronize-acknowledge) packet, and the browser sends an ACK (acknowledge) packet to complete the connection.
+
+Before the connection is established, it may need to pass through a firewall. A firewall is a security measure that filters out potentially harmful traffic and only allows authorized traffic to pass through.
+
+Once the TCP/IP connection is established, the browser sends an HTTPS (Hypertext Transfer Protocol Secure) request to the server. HTTPS is a secure version of HTTP that uses SSL (Secure Sockets Layer) or TLS (Transport Layer Security) encryption to protect data in transit from being intercepted or tampered with by third parties.
+
+The request may pass through a load balancer, which distributes incoming traffic across multiple servers to ensure that no single server becomes overloaded. The load balancer uses algorithms to determine which server should handle each request.
+
+The request then reaches the web server, which retrieves the requested web page and sends it back to the browser through the established TCP/IP connection. The web server may run software like Apache, Nginx or IIS to handle the request.
+
+If the web page requires dynamic content, the request may pass through an application server, which retrieves data from a database and generates the content to be sent back to the web server for delivery to the browser. The application server may run software like Node.js, PHP or Ruby on Rails.
+
+Finally, the web page is displayed in the browser and the connection is closed. The entire process happens in a matter of seconds and allows you to access millions of websites on the internet.
+
+In conclusion, typing https://www.google.com into your browser and pressing enter initiates a complex series of steps that allow you to connect to the website. Understanding these steps is important for anyone who wants to work in software engineering or web development, and it can also help you troubleshoot any issues that may arise when connecting to websites.
