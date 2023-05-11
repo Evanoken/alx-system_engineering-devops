@@ -1,20 +1,15 @@
 #!/usr/bin/python3
-import requests as r
-
+import requests
 
 def top_ten(subreddit):
-    """
-    queries the Reddit API and prints the titles of the first 10 hot posts
-    """
-    headers = {"User-Agent": "Frocuts"}
-    endpoint = "http://reddit.com/r/{}/hot.json?limit=10"
-    subs = r.get(endpoint.format(subreddit), headers=headers)
-    if subs.status_code != 200:
-        print(None)
-        return 0
-    subs = subs.json()
-    if subs["kind"] == "Listing":
-        for data in subs["data"]["children"]:
-            print(data["data"]["title"])
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
+    headers = {'User-agent': 'Mozilla/5.0'}
+    response = requests.get(url, headers=headers, allow_redirects=False)
+
+    if response.status_code == 200:
+        posts = response.json()["data"]["children"]
+        for post in posts:
+            print(post["data"]["title"])
     else:
         print(None)
+
